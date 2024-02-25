@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Relatividade Restrita</title>
+  </head>
+  <body>
+    <label>Fator Lorentz:</label>
+    <input id="num-1" type="number" />
+    <label>Velocidade (em % da Luz):</label>
+    <input id="num-2" type="number" />
+    <label>Distância em Metros:</label>
+    <input id="num-3" type="number" />
+    <button id="calc-sum">Calcular </button>
+    <div id="sum"></div>
+
+    <script type="text/javascript">
+      function verificaCampo() {
+        document
+          .getElementById("calc-sum")
+          .addEventListener("click", function () {
+            var num1 = document.getElementById("num-1");
+            var num2 = document.getElementById("num-2");
+            var num3 = document.getElementById("num-3");
+            // Transformar os valores em números:
+            num1 = Number(num1.value);
+            num2 = Number(num2.value);
+            num3 = Number(num3.value);
+
+            // Calcular a soma:
+            var sum1 = (num2*(3*10**8));
+            var sum2 = sum1*(200*10**-6);
+            var sum3 = (num3-sum2);
+            var sum4 = (num1*sum3);
+                    // Mostrar a soma:
+            document.getElementById("sum").innerText = "A distância em metros eh: " + sum4;
+          });
+      }
+      verificaCampo();
+    </script>
+  </body>
+</html>
+<div class="figure">
+    <img    
+    src="C:\Users\Admin\Downloads\cenario.jpeg"    width="900"    height="800">
+    </div>
